@@ -13,7 +13,7 @@
             --primary-gray: #f5f5f5;
             --gray-100: #f8f9fa;
             --gray-200: #e9ecef;
-            --gray-300: #dee2e6;
+            --gray-300: #6DA6B1;
             --gray-400: #ced4da;
             --gray-500: #adb5bd;
             --gray-600: #6c757d;
@@ -21,9 +21,11 @@
             --gray-800: #343a40;
             --gray-900: #212529;
             --secondary: #23377C; /* Orange */
-            --secondary-light: #6DA6B1;
+            --secondary-light: #B80718;
             --secondary-dark: #8164A3;
             --transition: all 0.3s ease;
+            
+            /* dee2e6 */
         }
         
         * {
@@ -195,7 +197,22 @@
             background-color: var(--gray-700);
             color: var(--primary-light);
         }
+
+        .home-img{
+            position: absolute;
+            width: 350px;
+            padding-top: 85vh;
+        }
+
+        .allianz{
+            width: 160px;
+            height: 40px;
+        }
         
+        .helvetia{
+            width: 160px;
+            height: 40px;
+        }
         /* About Section */
         .about {
             background-color: var(--primary-light);
@@ -552,14 +569,19 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content fade-in">
-                <h1>Hello, I'm <span style="color: var(--secondary);">Edoardo!</span></h1>
-                <h2 class="fade-in delay-1">I'm a Information Technology Junior Consultant | Mobile & Cloud</h2>
-                <p class="fade-in delay-2">Creative aspiring Project/Product Manager with a passion for innovation. My dream is to build my own business and drive impactful solutions</p>
+                <h1>Assicurazioni <span style="color: var(--secondary);">Gamurrini</span></h1>
+                <h2 class="fade-in delay-1">Agente Stefano Gamurrini | Allianz & Helvetia</h2>
+                <p class="fade-in delay-2">Il nostro obiettivo è fornire il miglior prodotto per le tue esigenze a prezzo competitivo</p>
                 <div class="fade-in delay-3">
-                    <a href="#projects" class="btn">Certifications & Projects</a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    <a href="#projects" class="btn">I nostri prodotti</a>
+                    <a href="#contact" class="btn btn-outline">Contattaci</a>
                 </div>
             </div>
+        </div>
+        <br>
+        <div class="home-img">
+            <img class="allianz" src="images/allianz.png" alt="Allianz"> <br>
+            <img class="helvetia" src="images/Helvetia.png" alt="Helvetia">
         </div>
     </section>
 
@@ -571,7 +593,7 @@
                     <img src="2o.png" alt="Your Name">
                 </div>
                 <div class="about-text">
-                    <h2>About Me</h2>
+                    <h2>Agenzia</h2>
                     <p><strong>Hello, I'm Edoardo!</strong> I'm a <strong>Computer Science graduate</strong> who started out as an <strong>IT Consultant</strong>, but my curiosity and ambition are steering me toward the world of <strong>Project and Product Management</strong>. I love the challenge of building things, whether it's software, strategies, or my dream of running my own business one day! (industry TBD, but I'm working on it 😊).            
                         Outside of work, you'll probably find me behind a <strong>drum kit</strong>. I'm a semi-professional <strong>drummer</strong> with a deep love for <strong>funk, R&B, and pretty much any genre that grooves</strong>. When I'm not drumming, I'm diving into <strong>personal finance</strong>, figuring out how to make money work <strong>for</strong> me (and not the other way around).
                         I have a bit of an addiction to <strong>watches</strong> and <strong>cars</strong>, the kind that makes me spend way too much time reading, researching, and maybe daydreaming about my next purchase.            
@@ -585,7 +607,7 @@
 <!-- Projects Section with filter buttons -->
 <section class="projects" id="projects">
     <div class="container">
-        <h2>Certifications & Projects</h2>
+        <h2>Prodotti</h2>
         
         <!-- Filter toggle buttons -->
         <div class="filter-buttons" style="text-align: center; margin-bottom: 2rem;">
@@ -712,8 +734,8 @@
 <!-- Contact Section -->
 <section class="contact" id="contact">
     <div class="container">
-        <h2>Get In Touch</h2>
-        <p>Feel free to reach out if you're looking for a collaborator, have a question, or just want to connect.</p>
+        <h2>Contattaci</h2>
+        <p>Hai qualche domanda, richiesta, comunicazione? Contattaci!</p>
         
         <!-- Updated form with Netlify attributes -->
         <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" netlify>
@@ -722,33 +744,33 @@
             
             <!-- Honeypot field to prevent spam -->
             <p style="display: none;">
-                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                <label>Non compilare questo se sei un umano<input name="bot-field" /></label>
             </p>
             
             <!-- Hidden field to specify recipient email -->
-            <input type="hidden" name="notification-email" value="edoardogamurrini@gmail.com" />
+            <input type="hidden" name="notification-email" value="stefano.gamurrini@virgilio.it" />
             
             <div class="form-group">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                <input type="text" name="name" class="form-control" placeholder="Nome" required>
             </div>
             <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                <input type="email" name="email" class="form-control" placeholder="Email" required>
             </div>
             <div class="form-group">
-                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                <input type="text" name="subject" class="form-control" placeholder="Soggetto" required>
             </div>
             <div class="form-group">
-                <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                <textarea name="message" class="form-control" rows="5" placeholder="Messaggio" required></textarea>
             </div>
-            <button type="submit" class="submit-btn">Send Message</button>
+            <button type="submit" class="submit-btn">Invia Messaggio</button>
         </form>
         
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/edoardo-gamurrini/" class="social-link">
+            <a href="https://www.linkedin.com/in/stefano-gamurrini-84228b51/" class="social-link">
                 <i style="font-size:24px" class="fa">&#xf08c;</i>
             </a>
-            <a href="https://github.com/Edo404" class="social-link">
-                <i style="font-size:24px" class="fa">&#xf09b;</i>                
+            <a href="https://www.facebook.com/allianzfano.gamurrinistefano/?locale=it_IT" class="social-link">
+                <i style="font-size:24px" class="fa">&#xf09a;</i>               
             </a>
         </div>
     </div>
