@@ -84,7 +84,7 @@
         
         header.scrolled {
             background-color: var(--primary-light);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 20px var(--secondary);
             padding: 0.5rem 2rem;
         }
         
@@ -124,6 +124,8 @@
             overflow: hidden;
             background-color: var(--primary-gray);
             color: var(--gray-800);
+            background-image: url('images/359efc4b-69b7-4c8b-b534-2b059eb10907.jpg');
+            background-size:cover;
         }
         
         .hero::after {
@@ -155,7 +157,10 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 800px;
+            max-width: 700px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: rgba(200, 200, 200, 0.7);
         }
         
         .hero h1 {
@@ -565,10 +570,10 @@
                 <img src="2o.png" alt="Your Name" style="width: 50px; height: 50px; border-radius: 50%; border-style: solid; border-width: 2px; border-color: var(--gray-400)">
             </a>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">Storia</a></li>
                 <li><a href="#projects">Servizi</a></li>
                 <li><a href="#team">Chi Siamo</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Contatti</a></li>
             </ul>
             <button class="nav-toggle">☰</button>
         </nav>
@@ -580,7 +585,7 @@
             <div class="hero-content fade-in">
                 <h1>Assicurazioni <span style="color: var(--secondary);">Gamurrini</span></h1>
                 <h2 class="fade-in delay-1">Agente Stefano Gamurrini</h2>
-                <p class="fade-in delay-2">Il nostro obiettivo è fornire il miglior prodotto per le tue esigenze a prezzo competitivo</p>
+                <p class="fade-in delay-2">Il nostro obiettivo è fornire il miglior prodotto per le tue esigenze</p>
                 <div class="fade-in delay-3">
                     <a href="#projects" class="btn">I nostri prodotti</a>
                     <a href="#contact" class="btn btn-outline">Contattaci</a>
