@@ -525,6 +525,29 @@
             animation-delay: 0.6s;
         }
 
+        .location{
+            position: relative; 
+            width: 100%; 
+            height: 500px; 
+            overflow: hidden;
+        }
+
+        .location-overlay-mobile{
+            display: none;
+        }
+        .location-overlay{
+            position: absolute; 
+            top: 50px; 
+            right: 50px; 
+            width: 350px; 
+            background-color: var(--secondary); 
+            color: var(--primary-light);
+            padding: 2rem;
+            z-index: 10;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .about-content {
@@ -558,6 +581,33 @@
                 display: block;
                 z-index: 999;
             }
+
+            .location {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .location-overlay {
+                display: none;
+            }
+
+            .location-overlay-mobile {
+                display: block;
+                position: relative;
+                top: calc(100% - 300px);
+                left: 0;
+                width: 100%;
+                max-width: 100%;
+                right: 50px; 
+                background-color: var(--secondary); 
+                color: var(--primary-light);
+                padding: 2rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            }
+            
+            .location iframe {
+                order: 1;
+            }
         }
     </style>
 </head>
@@ -572,7 +622,7 @@
                 <li><a href="#about">Storia</a></li>
                 <li><a href="#projects">Prodotti</a></li>
                 <li><a href="#team">Chi Siamo</a></li>
-                <li><a href="#team">Dove Siamo</a></li>
+                <li><a href="#dovesiamo">Dove Siamo</a></li>
                 <li><a href="#contact">Contatti</a></li>
             </ul>
             <button class="nav-toggle">☰</button>
@@ -637,11 +687,10 @@
                 </div>
                 <div class="project-content">
                     <h3>Auto Moto</h3>
-                    <p>Product Management Basics Certification by Pendo.io taken on February 2025</p>
+                    <p>Polizza assicurativa per la tua auto o la tua moto</p>
                     <div class="project-tags">
-                        <span class="project-tag">Certification</span>
-                        <span class="project-tag">Product Management</span>
-                        <span class="project-tag">Pendo.io</span>
+                        <span class="project-tag">Allianz</span>
+                        <span class="project-tag">Polizza</span>
                     </div>
                     <div class="project-links">
                         <a href="https://www.credly.com/badges/44edc293-e20c-458d-9e63-bbaf9267e1a0" class="btn">Dettagli Prodotto</a>
@@ -656,11 +705,10 @@
                 </div>
                 <div class="project-content">
                     <h3>Infortuni Malattia</h3>
-                    <p>Product Analytics Certification by Pendo.io taken on February 2025</p>
+                    <p>Polizza assicurativa per i tuoi infortuni e malattie</p>
                     <div class="project-tags">
-                        <span class="project-tag">Certification</span>
-                        <span class="project-tag">Product Management</span>
-                        <span class="project-tag">Pendo.io</span>
+                        <span class="project-tag">Allianz</span>
+                        <span class="project-tag">Polizza</span>
                     </div>
                     <div class="project-links">
                         <a href="https://www.credly.com/badges/98a04564-1af9-463b-beab-174276cd8c7c" class="btn">Dettagli Prodotto</a>
@@ -675,11 +723,10 @@
                 </div>
                 <div class="project-content">
                     <h3>Casa Famiglia</h3>
-                    <p>Scrum Certification by Project Management Institute taken on February 2025</p>
+                    <p>Polizza assicurativa per la tua Casa e Famiglia</p>
                     <div class="project-tags">
-                        <span class="project-tag">Certification</span>
-                        <span class="project-tag">Project Management</span>
-                        <span class="project-tag">PMI</span>
+                        <span class="project-tag">Allianz</span>
+                        <span class="project-tag">Polizza</span>
                     </div>
                     <div class="project-links">
                         <a href="https://www.linkedin.com/learning/certificates/bd40b6a13e5afcae7ea0c408caa95919ed8221ee7b42947622762a46ff796997?trk=share_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BD1Y1bv5NR2qyS084LieIPg%3D%3D" class="btn">Dettagli Prodotto</a>
@@ -694,11 +741,10 @@
                 </div>
                 <div class="project-content">
                     <h3>Animali</h3>
-                    <p>Power Platform Developer Associate by Microsoft taken on October 2023 expiring in October 2025</p>
+                    <p>Polizza assicurativa per i tuoi animali</p>
                     <div class="project-tags">
-                        <span class="project-tag">Certification</span>
-                        <span class="project-tag">Power Platform</span>
-                        <span class="project-tag">Microsoft</span>
+                        <span class="project-tag">Allianz</span>
+                        <span class="project-tag">Polizza</span>
                     </div>
                     <div class="project-links">
                         <a href="https://learn.microsoft.com/en-us/users/edoardogamurrini-1090/credentials/c07a5e0f8ccf2a3d?ref=https%3A%2F%2Fwww.linkedin.com%2F" class="btn">Dettagli Prodotto</a>
@@ -712,11 +758,11 @@
                     <img src="postsPics/portfolio.png" alt="Project 5">
                 </div>
                 <div class="project-content">
-                    <h3><a href="#home">Vita</a></h3>
-                    <p>Personal Portfolio Website made by me in February 2025</p>
+                    <h3>Vita</h3>
+                    <p>Polizza assicurativa per i tuoi animali</p>
                     <div class="project-tags">
-                        <span class="project-tag">Project</span>
-                        <span class="project-tag">Web Development</span>
+                        <span class="project-tag">Helvetia</span>
+                        <span class="project-tag">Polizza</span>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/Edo404/PersonalCV" class="btn">Dettagli Prodotto</a>
@@ -730,11 +776,11 @@
                     <img src="postsPics/studioroccaromana.png" alt="Project 6">
                 </div>
                 <div class="project-content">
-                    <h3><a href="https://www.studioroccaromana.it">studioroccaromana.it</a></h3>
-                    <p>Music and Entertainment Manager's Company Website made by me in July 2022</p>
+                    <h3>Cani</h3>
+                    <p>Polizza assicurativa per i tuoi animali</p>
                     <div class="project-tags">
-                        <span class="project-tag">Project</span>
-                        <span class="project-tag">Web Development</span>
+                        <span class="project-tag">Helvetia</span>
+                        <span class="project-tag">Polizza</span>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/Edo404/Studioroccaromana" class="btn">Dettagli Prodotto</a>
@@ -744,6 +790,50 @@
         </div>
     </div>
 </section>
+
+<!-- Location Section -->
+<section class="location" id="dovesiamo">
+    <div class="location-overlay">
+        <h2 style="color: var(--primary-light); margin-bottom: 1rem;">Dove Siamo</h2>
+        <p>
+            <strong>Assicurazioni Gamurrini</strong><br>
+            Via Arco d'Augusto, 56<br>
+            61032 Fano (PU), Italia<br><br>
+            
+            <i class="fa fa-phone"></i> +39 0721 800123<br>
+            <i class="fa fa-envelope"></i> stefano.gamurrini@virgilio.it<br><br>
+            
+            Lunedì - Giovedì <br> 9:00-12:30 / 15:30-19:00 <br>
+            Venerdì <br> 
+            9:00-12:30
+        </p>
+    </div>
+    
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.714381253252!2d12.85603367674757!3d43.818404171248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132d32ad9f7b5859%3A0x8a915a88d45a4b97!2sArco%20d&#39;Augusto%2C%2054%2C%2061032%20Fano%20PU!5e0!3m2!1sit!2sit!4v1714132345678!5m2!1sit!2sit" 
+        width="100%" 
+        height="500" 
+        style="border:0; position: absolute; top: 0; left: 0; z-index: 1;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+</section>
+
+<div class="location-overlay-mobile">
+    <h2 style="color: var(--primary-light); margin-bottom: 1rem;">Dove Siamo</h2>
+    <p>
+        <strong>Assicurazioni Gamurrini</strong><br>
+        Via Garibaldi, 45<br>
+        61032 Fano (PU), Italia<br><br>
+        
+        <i class="fa fa-phone"></i> +39 0721 800123<br>
+        <i class="fa fa-envelope"></i> stefano.gamurrini@virgilio.it<br><br>
+        
+        Lunedì - Giovedì <br> 9:00-12:30 / 15:30-19:00 <br>
+        Venerdì <br> 
+        9:00-12:30
+    </p>
+</div>
 
 <!-- Contact Section -->
 <section class="contact" id="contact">
