@@ -768,6 +768,28 @@
                 padding: 3px;
             } 
         }
+
+
+
+
+
+
+        /* Add these styles to your existing CSS */
+.project-card {
+    /* Keep your existing styles and add: */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+
+.filter-btn {
+    /* Keep your existing styles and add: */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Optional: add a subtle scaling effect during transitions */
+.projects-grid {
+    min-height: 450px; /* Set to approximate height of your cards to prevent layout jumps */
+}
     </style>
 </head>
 <body>
@@ -997,8 +1019,8 @@
             <!-- Office 2 -->
             <div class="team-info">
                 <h3>Subagenzia Pesaro</h3>
-                <p><i class="fa fa-map-marker"></i> Via Arco d'Augusto, 54<br>61032 Fano (PU), Italia</p>
-                <p><i class="fa fa-phone"></i> <a href="tel:+39 0721 803521">+39 0721 803521</a></p>
+                <p><i class="fa fa-map-marker"></i> Via Y.A. Gagarin, 212<br>61122 Pesaro (PU), Italia</p>
+                <p><i class="fa fa-phone"></i> <a href="tel:+39 0721 400876">+39 0721 400876</a></p>
                 <p><i class="fa fa-envelope"></i> <a href="mailto:gamurriniassicurazioni@gmail.com">gamurriniassicurazioni@gmail.com</a></p>
             </div>
             
@@ -1189,7 +1211,8 @@
             el.style.transform = 'translateY(20px)';
             observer.observe(el);
         });
-        // Filter functionality
+
+        // Enhanced filter functionality with smooth transitions
         document.addEventListener('DOMContentLoaded', function() {
             const certBtn = document.getElementById('certifications-btn');
             const projBtn = document.getElementById('projects-btn');
@@ -1213,14 +1236,36 @@
                 certBtn.classList.add('active');
                 projBtn.classList.remove('active');
                 
-                // Show certifications, hide projects
-                certCards.forEach(card => {
-                    card.style.display = 'flex';
+                // First fade out the project cards that are visible
+                projCards.forEach(card => {
+                    if (card.style.display !== 'none') {
+                        card.style.opacity = '0';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                            
+                            // Then fade in the certification cards
+                            certCards.forEach(certCard => {
+                                certCard.style.display = 'flex';
+                                certCard.style.opacity = '0';
+                                
+                                // Small delay before starting to fade in
+                                setTimeout(() => {
+                                    certCard.style.opacity = '1';
+                                }, 50);
+                            });
+                        }, 300); // Match this with your CSS transition time
+                    }
                 });
                 
-                projCards.forEach(card => {
-                    card.style.display = 'none';
-                });
+                // If no project cards were visible, directly show certification cards
+                if (projCards[0].style.display === 'none') {
+                    certCards.forEach(card => {
+                        card.style.display = 'flex';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                        }, 50);
+                    });
+                }
             }
             
             function showProjects() {
@@ -1228,14 +1273,36 @@
                 projBtn.classList.add('active');
                 certBtn.classList.remove('active');
                 
-                // Show projects, hide certifications
-                projCards.forEach(card => {
-                    card.style.display = 'flex';
+                // First fade out the certification cards that are visible
+                certCards.forEach(card => {
+                    if (card.style.display !== 'none') {
+                        card.style.opacity = '0';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                            
+                            // Then fade in the project cards
+                            projCards.forEach(projCard => {
+                                projCard.style.display = 'flex';
+                                projCard.style.opacity = '0';
+                                
+                                // Small delay before starting to fade in
+                                setTimeout(() => {
+                                    projCard.style.opacity = '1';
+                                }, 50);
+                            });
+                        }, 300); // Match this with your CSS transition time
+                    }
                 });
                 
-                certCards.forEach(card => {
-                    card.style.display = 'none';
-                });
+                // If no certification cards were visible, directly show project cards
+                if (certCards[0].style.display === 'none') {
+                    projCards.forEach(card => {
+                        card.style.display = 'flex';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                        }, 50);
+                    });
+                }
             }
         });
     </script>
