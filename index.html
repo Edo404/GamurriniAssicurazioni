@@ -549,6 +549,146 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
+
+        /* Team Section */
+        .team {
+            background-color: var(--primary-light);
+            padding: 5rem 2rem;
+        }
+
+        .team h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--gray-800);
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .team h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+            transform: translateX(-50%);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        /* Left column with info */
+        .team-info {
+            background-color: var(--secondary);
+            color: var(--primary-light);
+            padding: 2rem;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .team-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-light);
+        }
+
+        .team-info p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .team-info a {
+            color: var(--primary-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .team-info a:hover {
+            opacity: 0.8;
+        }
+
+        .team-info i {
+            width: 20px;
+        }
+
+        /* Team member cards */
+        .team-member {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 350px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .team-member:hover img {
+            transform: scale(1.05);
+        }
+
+        .team-member-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 1.2rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .team-member:hover .team-member-info {
+            padding-bottom: 1.8rem;
+        }
+
+        .team-member-info h4 {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            margin-bottom: 0.2rem;
+        }
+
+        .team-member-info h5 {
+            font-size: 1.1rem;
+            color: var(--gray-800);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member-info p {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            margin-bottom: 0;
+        }
+        @media (max-width: 1200px) {
+            .team-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        
+            .team-info {
+                grid-column: span 3;
+                text-align: center;
+            }
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .about-content {
@@ -609,6 +749,24 @@
             .location iframe {
                 order: 1;
             }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+    
+            .team-info {
+                grid-column: span 1;
+            }
+            
+            .team-member {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .team-info {
+                padding: 3px;
+            } 
         }
     </style>
 </head>
@@ -617,7 +775,7 @@
     <header>
         <nav class="container">
             <a href="#home" class="logo">
-                <img src="2o.png" alt="Your Name" style="width: 50px; height: 50px; border-radius: 50%; border-style: solid; border-width: 2px; border-color: var(--gray-400)">
+                <img src="images/2o.png" alt="Your Name" style="width: 50px; height: 50px; border-radius: 50%; border-style: solid; border-width: 2px; border-color: var(--gray-400)">
             </a>
             <ul class="nav-links">
                 <li><a href="#about">Storia</a></li>
@@ -655,7 +813,7 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-img">
-                    <img src="2o.png" alt="Your Name">
+                    <img src="images/2o.png" alt="Your Name">
                 </div>
                 <div class="about-text">
                     <h2>Storia</h2>
@@ -684,7 +842,7 @@
             <!-- Project 1 - Certification -->
             <div class="project-card certification-card">
                 <div class="project-image">
-                    <img src="postsPics/product-management-basics-certification (2).png" alt="Project 1" style="width: 200px; height: 200px;">
+                    <img src="images/CertificateOfCompletion_Scrum The Basics (1)_page-0001.jpg" alt="Project 1" style="width: 200px; height: 200px;">
                 </div>
                 <div class="project-content">
                     <h3>Auto Moto</h3>
@@ -702,7 +860,7 @@
             <!-- Project 2 - Certification -->
             <div class="project-card certification-card">
                 <div class="project-image">
-                    <img src="postsPics/product-analytics-certification (2).png" alt="Project 2" style="width: 200px; height: 200px;">
+                    <img src="images/CertificateOfCompletion_Scrum The Basics (1)_page-0001.jpg" alt="Project 2" style="width: 200px; height: 200px;">
                 </div>
                 <div class="project-content">
                     <h3>Infortuni Malattia</h3>
@@ -720,7 +878,7 @@
             <!-- Project 3 - Certification -->
             <div class="project-card certification-card">
                 <div class="project-image">
-                    <img src="postsPics/CertificateOfCompletion_Scrum The Basics (1)_page-0001.jpg" alt="Project 3" style="width: 270px; height: 200px;">
+                    <img src="images/CertificateOfCompletion_Scrum The Basics (1)_page-0001.jpg" alt="Project 3" style="width: 270px; height: 200px;">
                 </div>
                 <div class="project-content">
                     <h3>Casa Famiglia</h3>
@@ -738,7 +896,7 @@
             <!-- Project 4 - Certification -->
             <div class="project-card certification-card">
                 <div class="project-image">
-                    <img src="postsPics/PL-400_2025exp_page-0001.jpg" alt="Project 4">
+                    <img src="images/CertificateOfCompletion_Scrum The Basics (1)_page-0001.jpg" alt="Project 4">
                 </div>
                 <div class="project-content">
                     <h3>Animali</h3>
@@ -756,7 +914,7 @@
             <!-- Project 5 - Project -->
             <div class="project-card project-card-only">
                 <div class="project-image">
-                    <img src="postsPics/portfolio.png" alt="Project 5">
+                    <img src="images/CertificateOfCompletion_Scrum The Basics (1)_page-0001.jpg" alt="Project 5">
                 </div>
                 <div class="project-content">
                     <h3>Vita</h3>
@@ -774,7 +932,7 @@
             <!-- Project 6 - Project -->
             <div class="project-card project-card-only">
                 <div class="project-image">
-                    <img src="postsPics/studioroccaromana.png" alt="Project 6">
+                    <img src="images/CertificateOfCompletion_Scrum The Basics (1)_page-0001.jpg" alt="Project 6">
                 </div>
                 <div class="project-content">
                     <h3>Cani</h3>
@@ -788,6 +946,91 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="team" id="team">
+    <div class="container">
+        <h2>Chi Siamo</h2>
+        
+        <div class="team-grid">
+            <!-- Left column with contact info -->
+            <div class="team-info">
+                <h3>Sede Centrale</h3>
+                <p><i class="fa fa-map-marker"></i> Via Arco d'Augusto, 54<br>61032 Fano (PU), Italia</p>
+                <p><i class="fa fa-phone"></i> <a href="tel:+39 0721 803521">+39 0721 803521</a></p>
+                <p><i class="fa fa-envelope"></i> <a href="mailto:gamurriniassicurazioni@gmail.com">gamurriniassicurazioni@gmail.com</a></p>
+            </div>
+            
+            <!-- Team member 1 -->
+            <div class="team-member">
+                <img src="images/2o.png" alt="Team Member 1">
+                <div class="team-member-info">
+                    <h4>Stefano</h4>
+                    <h5>Gamurrini</h5>
+                    <p>Agente Generale</p>
+                </div>
+            </div>
+            
+            <!-- Team member 2 -->
+            <div class="team-member">
+                <img src="images/2o.png" alt="Team Member 2">
+                <div class="team-member-info">
+                    <h4>Silvia</h4>
+                    <h5>Vespaziani</h5>
+                    <p>Consulente Assicurativo</p>
+                </div>
+            </div>
+            
+            <!-- Team member 3 -->
+            <div class="team-member">
+                <img src="images/2o.png" alt="Team Member 3">
+                <div class="team-member-info">
+                    <h4>Chiara</h4>
+                    <h5>Bianchi</h5>
+                    <p>Responsabile Sinistri</p>
+                </div>
+            </div>
+
+            <!-- Office 2 -->
+            <div class="team-info">
+                <h3>Subagenzia Pesaro</h3>
+                <p><i class="fa fa-map-marker"></i> Via Arco d'Augusto, 54<br>61032 Fano (PU), Italia</p>
+                <p><i class="fa fa-phone"></i> <a href="tel:+39 0721 803521">+39 0721 803521</a></p>
+                <p><i class="fa fa-envelope"></i> <a href="mailto:gamurriniassicurazioni@gmail.com">gamurriniassicurazioni@gmail.com</a></p>
+            </div>
+            
+            <!-- Team member 1 -->
+            <div class="team-member">
+                <img src="images/2o.png" alt="Team Member 1">
+                <div class="team-member-info">
+                    <h4>Andrea</h4>
+                    <h5>Montano</h5>
+                    <p>Agente Generale</p>
+                </div>
+            </div>
+            
+            <!-- Team member 2 -->
+            <div class="team-member">
+                <img src="images/2o.png" alt="Team Member 2">
+                <div class="team-member-info">
+                    <h4>Marusca</h4>
+                    <h5>Rossi</h5>
+                    <p>Consulente Assicurativo</p>
+                </div>
+            </div>
+            
+            <!-- Team member 3 -->
+            <!-- <div class="team-member">
+                <img src="images/team-member-3.jpg" alt="Team Member 3">
+                <div class="team-member-info">
+                    <h4>Marco</h4>
+                    <h5>Bianchi</h5>
+                    <p>Responsabile Sinistri</p>
+                </div>
+            </div> -->
         </div>
     </div>
 </section>
